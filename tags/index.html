@@ -30,7 +30,6 @@
 <div class=ml-auto>
 <div class="form-check form-switch">
 <input class=form-check-input type=checkbox id=light-dark-mode-switch>
-<label class="form-check-label image-to-invert" for=light-dark-mode-switch>🌓</label>
 <noscript>requires JS</noscript>
 </div>
 <script>var html,darkmodeSwitch;const MODE_KEY="mode";html=document.querySelector("html"),darkmodeSwitch=document.getElementById("light-dark-mode-switch");function set_dark_mode(){darkmodeSwitch.checked=!0,html.classList.add("dark"),html.classList.remove("light"),localStorage.setItem(MODE_KEY,!0)}function set_light_mode(){darkmodeSwitch.checked=!1,html.classList.add("light"),html.classList.remove("dark"),localStorage.setItem(MODE_KEY,!1)}let storedMode=localStorage.getItem(MODE_KEY)=="true",perfersDarkmode=window.matchMedia('(prefers-color-scheme: dark)').matches;storedMode?(console.log("Dark-mode set in localStorage."),set_dark_mode()):perfersDarkmode?(console.log("User prefers dark-mode."),set_dark_mode()):set_light_mode(),darkmodeSwitch.addEventListener('change',a=>{a.currentTarget.checked?set_dark_mode():set_light_mode()})</script>
@@ -45,16 +44,16 @@
 </div>
 </article>
 </div><footer class="container text-center my-3">
-<a rel=me href=https://twitter.com/bitcoindevblog class="m-2 umami--click--footer-twitter">
+<a rel=me href=https://twitter.com/bitcoindevblog class="m-2 image-to-invert umami--click--footer-twitter">
 <img src=/img/footer/twitter.svg alt="logo twitter" height=32px>
 </a>
-<a rel=me href=https://github.com/dev-bitcoin class="m-2 umami--click--footer-github">
+<a rel=me href=https://github.com/dev-bitcoin class="m-2 image-to-invert umami--click--footer-github">
 <img src=/img/footer/github.svg alt="logo github" height=32px>
 </a>
-<a href=/feed.xml class="m-2 umami--click--footer-rss-feed">
+<a href=/feed.xml class="m-2 image-to-invert umami--click--footer-rss-feed">
 <img src=/img/footer/rss.svg alt="logo rss" height=32px>
 </a>
-<a href=mailto:contact@bitcoin-dev.blog class="m-2 umami--click--footer-gmail">
+<a href=mailto:contact@bitcoin-dev.blog class="m-2 image-to-invert umami--click--footer-gmail">
 <img src=/img/footer/gmail.svg alt="logo mail" height=32px>
 </a>
 </footer>
