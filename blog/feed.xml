@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blogs on bitcoin-dev blog</title><link>https://bitcoin-dev.blog/blog/</link><description>Recent content in Blogs on bitcoin-dev blog</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 20 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://bitcoin-dev.blog/blog/feed.xml" rel="self" type="application/rss+xml"/><item><title>This is an example post</title><link>https://bitcoin-dev.blog/blog/example-post/</link><pubDate>Wed, 20 Oct 2021 00:00:00 +0000</pubDate><guid>https://bitcoin-dev.blog/blog/example-post/</guid><description>&lt;p>Here is the description of the example blog post.
 You&amp;rsquo;d want to summarize the contents of the following post.
 Don&amp;rsquo;t let this get too long, though!&lt;/p>
-&lt;p>Here your blog post starts.&lt;/p>
+&lt;p>Here the blog post starts.
+You can find the &lt;a href="https://github.com/dev-bitcoin/blog/blob/main/content/blog/example-post.md?plain=1">source&lt;/a> on GitHub.
+Please read the &lt;a href="https://github.com/dev-bitcoin/blog/blob/main/CONTRIBUTING.md">CONTRIBUTING.md&lt;/a> before you start writing a post for this blog.&lt;/p>
 &lt;h4 id="text">Text&lt;/h4>
 &lt;p>You can use markdown formatting.&lt;/p>
 &lt;ul>
