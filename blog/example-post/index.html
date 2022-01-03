@@ -25,6 +25,9 @@ Don&rsquo;t let this get too long, though!">
 <link rel="shortcut icon" href=/favicon.png type=image/png>
 <link rel=icon href=/favicon.png type=image/png>
 <script async defer data-website-id=dfc2acc6-9237-4a34-bc2b-37967cb79a4c src=https://umami.b10c.me/umami.js></script>
+<script>MathJax={tex:{inlineMath:[['$','$'],['\\(','\\)']],displayMath:[['$$','$$'],['\\[','\\]']],processEscapes:!0,processEnvironments:!0},options:{skipHtmlTags:['script','noscript','style','textarea','pre']}},window.addEventListener('load',a=>{document.querySelectorAll("mjx-container").forEach(function(a){a.parentElement.classList+='has-jax'})})</script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id=MathJax-script async src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js></script>
 </head>
 <body><nav class="navbar container rounded-bottom shadow-sm mb-4">
 <a class=navbar-brand href=/>
@@ -146,6 +149,23 @@ produces</p>
 <div style=position:relative;padding-bottom:56.25%;height:0;overflow:hidden>
 <iframe src=https://www.youtube-nocookie.com/embed/Ey0xAcN11zk style=position:absolute;top:0;left:0;width:100%;height:100%;border:0 allowfullscreen title="YouTube Video"></iframe>
 </div>
+<hr>
+<h4 id=latex-via-mathjax>$\LaTeX$ via MathJax</h4>
+<p>$\LaTeX$ formulars can be embeeded with <a href=https://www.mathjax.org/>MathJax</a>.
+MathJax is disabled by default, but can be enabled by setting <code>mathjax: true</code> in the front-matter.
+See the front-matter of this post for an example.</p>
+<p>In-line LaTeX can be written as $1 + 1 = 3$. This also works in headings.
+Due to Hugo&rsquo;s MarkDown parser, multi-line formulars <a href=https://github.com/wowchemy/wowchemy-hugo-themes/issues/291#issuecomment-334746889>need six backslashes</a> (<code>\\\\\\\\\\\\</code>) between new lines.
+See the example below.</p>
+<p>$$
+\begin{align}
+p & : \text{private key} \\\<br>
+P = pG & : \text{public key} \\\<br>
+m & : \text{message} \\\<br>
+r & : \text{random nonce} \\\<br>
+R = rG & : \text{nonce commitment}
+\end{align}
+$$</p>
 <section class=footnotes role=doc-endnotes>
 <hr>
 <ol>
