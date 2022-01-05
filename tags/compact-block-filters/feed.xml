@@ -84,7 +84,7 @@ hashing-plus-convert-to-number function we use will take each object and produce
 a number in the space from [0, 10]. It is uniformly distributed in this space.
 That means that, after ordering them, we will get (in the very, very ideal case)
 something like this:&lt;/p>
-&lt;figure>&lt;img src="https://bitcoin-dev.blog/post-data/compact-block-filters/dense.jpeg" class="img img-fluid d-block mx-auto" width="250" height="250"/>
+&lt;figure>&lt;img src="https://bitcoin-dev.blog/post-data/compact-block-filters/dense.jpeg" class="img img-fluid d-block mx-auto figure-center-img p-3 rounded" width="250" height="250"/>
 &lt;/figure>
 &lt;p>First of all, wow that is so great cause we have drastically decreased the size
 of an objects fingerprint. Each one is just a number now. Ok so, let this be
@@ -100,7 +100,7 @@ filter is 1. This is no good. We have lost too much info on our quest to
 compress the data in the filter. What we need is a higher false-positive (fp)
 rate. Ok so let’s say we want a false positive rate of 5. Then what we want is
 to have our objects be mapped uniformly to a space of [0, 50]:&lt;/p>
-&lt;figure>&lt;img src="https://bitcoin-dev.blog/post-data/compact-block-filters/sparse.png" class="img img-fluid d-block mx-auto" width="250" height="250"/>
+&lt;figure>&lt;img src="https://bitcoin-dev.blog/post-data/compact-block-filters/sparse.png" class="img img-fluid d-block mx-auto figure-center-img p-3 rounded" width="250" height="250"/>
 &lt;/figure>
 &lt;p>This is starting to look a bit better. If I am a client downloading this filter
 and I check if my objects are maybe in the filter, there will be a 1/5 chance
@@ -133,7 +133,7 @@ use more bits to encode larger, unlikely quotients. Then we also need to encode
 the remainders (since we want to be able to reconstruct the values exactly), and
 these will always be numbers between [0, M-1] (in our case, [0, 4]). For
 encoding the quotients, we use the following mapping:&lt;/p>
-&lt;figure>&lt;img src="https://bitcoin-dev.blog/post-data/compact-block-filters/quotient.png" class="img img-fluid d-block mx-auto" width="125" height="125"/>
+&lt;figure>&lt;img src="https://bitcoin-dev.blog/post-data/compact-block-filters/quotient.png" class="img img-fluid d-block mx-auto figure-center-img p-3 rounded" width="125" height="125"/>
 &lt;/figure>
 &lt;p>The mapping above is easy to read: The number of &lt;code>1&lt;/code>s indicates the quotient we
 are encoding, and the &lt;code>0&lt;/code> indicates the end of the quotient encoding. So for each
@@ -141,7 +141,7 @@ number in our list, we encode the quotient using the above table, and then we
 convert the remainder to binary using the number of bits needed to encode the
 maximum of M-1. In our case, that is 3 bits. Here is a table showing the
 encoding of the possible remainders in our example:&lt;/p>
-&lt;figure>&lt;img src="https://bitcoin-dev.blog/post-data/compact-block-filters/remainder.png" class="img img-fluid d-block mx-auto" width="125" height="125"/>
+&lt;figure>&lt;img src="https://bitcoin-dev.blog/post-data/compact-block-filters/remainder.png" class="img img-fluid d-block mx-auto figure-center-img p-3 rounded" width="125" height="125"/>
 &lt;/figure>
 &lt;p>So, in our ideal case example, our list of &lt;code>[0, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]&lt;/code>
 can be encoded as follows:&lt;/p>
@@ -266,7 +266,7 @@ the sorted &lt;code>numbers&lt;/code> list.&lt;/p>
 }
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>Awesome! Here is a graph showing the values in the &lt;code>numbers&lt;/code> and &lt;code>differences&lt;/code>
 lists:&lt;/p>
-&lt;figure>&lt;img src="https://bitcoin-dev.blog/post-data/compact-block-filters/bitcoinExample.png" class="img img-fluid d-block mx-auto" width="600" height="600"/>
+&lt;figure>&lt;img src="https://bitcoin-dev.blog/post-data/compact-block-filters/bitcoinExample.png" class="img img-fluid d-block mx-auto figure-center-img p-3 rounded" width="600" height="600"/>
 &lt;/figure>
 &lt;p>As you can see, the 85 numbers are really nicely uniformly distributed across
 the space! And this results in the values in the &lt;code>differences&lt;/code> list being pretty

@@ -164,7 +164,7 @@ hashing-plus-convert-to-number function we use will take each object and produce
 a number in the space from [0, 10]. It is uniformly distributed in this space.
 That means that, after ordering them, we will get (in the very, very ideal case)
 something like this:</p>
-<figure><img src=/post-data/compact-block-filters/dense.jpeg class="img img-fluid d-block mx-auto" width=250 height=250>
+<figure><img src=/post-data/compact-block-filters/dense.jpeg class="img img-fluid d-block mx-auto figure-center-img p-3 rounded" width=250 height=250>
 </figure>
 <p>First of all, wow that is so great cause we have drastically decreased the size
 of an objects fingerprint. Each one is just a number now. Ok so, let this be
@@ -180,7 +180,7 @@ filter is 1. This is no good. We have lost too much info on our quest to
 compress the data in the filter. What we need is a higher false-positive (fp)
 rate. Ok so let’s say we want a false positive rate of 5. Then what we want is
 to have our objects be mapped uniformly to a space of [0, 50]:</p>
-<figure><img src=/post-data/compact-block-filters/sparse.png class="img img-fluid d-block mx-auto" width=250 height=250>
+<figure><img src=/post-data/compact-block-filters/sparse.png class="img img-fluid d-block mx-auto figure-center-img p-3 rounded" width=250 height=250>
 </figure>
 <p>This is starting to look a bit better. If I am a client downloading this filter
 and I check if my objects are maybe in the filter, there will be a 1/5 chance
@@ -213,7 +213,7 @@ use more bits to encode larger, unlikely quotients. Then we also need to encode
 the remainders (since we want to be able to reconstruct the values exactly), and
 these will always be numbers between [0, M-1] (in our case, [0, 4]). For
 encoding the quotients, we use the following mapping:</p>
-<figure><img src=/post-data/compact-block-filters/quotient.png class="img img-fluid d-block mx-auto" width=125 height=125>
+<figure><img src=/post-data/compact-block-filters/quotient.png class="img img-fluid d-block mx-auto figure-center-img p-3 rounded" width=125 height=125>
 </figure>
 <p>The mapping above is easy to read: The number of <code>1</code>s indicates the quotient we
 are encoding, and the <code>0</code> indicates the end of the quotient encoding. So for each
@@ -221,7 +221,7 @@ number in our list, we encode the quotient using the above table, and then we
 convert the remainder to binary using the number of bits needed to encode the
 maximum of M-1. In our case, that is 3 bits. Here is a table showing the
 encoding of the possible remainders in our example:</p>
-<figure><img src=/post-data/compact-block-filters/remainder.png class="img img-fluid d-block mx-auto" width=125 height=125>
+<figure><img src=/post-data/compact-block-filters/remainder.png class="img img-fluid d-block mx-auto figure-center-img p-3 rounded" width=125 height=125>
 </figure>
 <p>So, in our ideal case example, our list of <code>[0, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]</code>
 can be encoded as follows:</p>
@@ -363,7 +363,7 @@ the sorted <code>numbers</code> list.</p>
 }
 </code></pre></div><p>Awesome! Here is a graph showing the values in the <code>numbers</code> and <code>differences</code>
 lists:</p>
-<figure><img src=/post-data/compact-block-filters/bitcoinExample.png class="img img-fluid d-block mx-auto" width=600 height=600>
+<figure><img src=/post-data/compact-block-filters/bitcoinExample.png class="img img-fluid d-block mx-auto figure-center-img p-3 rounded" width=600 height=600>
 </figure>
 <p>As you can see, the 85 numbers are really nicely uniformly distributed across
 the space! And this results in the values in the <code>differences</code> list being pretty
@@ -506,25 +506,55 @@ All text and images in this work are licensed under a <a rel=license href=http:/
 <section>
 <div class=row>
 <div class=col-lg>
+<h4 class=mt-4>Next</h4>
+<div class="card mb-4 border-0 rounded shadow-sm">
+<div class="row no-gutters">
+<div class=col-12>
+<img src=/post-data/schnorr-basics/sig-overview.png style=object-fit:cover;height:100% class="card-img shadow-sm" alt="Image for Schnorr basics">
+<a class="stretched-link umami--click--card-sm-img-schnorr-basics" href=/blog/schnorr-basics/></a>
+</div>
+<div class=col-12>
+<div class=card-body>
+<small class=text-muted>
+January 3, 2022
+</small>
+<h4 class=card-title>Schnorr basics
+</h4>
+<p class=card-text>
+<p>If you&rsquo;re having a difficult time wrapping your head around Schnorr
+signatures, you&rsquo;re not alone. In this post, I attempt to explain
+Schnorr signatures at a level that I myself appreciate, and
+hopefully, you&rsquo;ll find it valuable too.</p>
+</p>
+</div>
+<a class="stretched-link umami--click--card-sm-text-schnorr-basics" href=/blog/schnorr-basics/></a>
+</div>
+</div>
+</div>
+</div>
+<div class=col-lg>
 <h4 class=mt-4>Previous</h4>
 <div class="card mb-4 border-0 rounded shadow-sm">
-<div class="row row-cols-1 row-cols-md-2">
-<div class="col col-md-4">
-<img src=/post-data/usdt-support-core/header.png style=object-fit:cover;height:100% class="card-img shadow-sm rounded" alt="Image for Userspace, Statically Defined Tracing support for Bitcoin Core">
-<a class="stretched-link umami--click--card-img-userspace-statically-defined-tracing-support-for-bitcoin-core" href=/blog/bitcoin-core-usdt-support/></a>
+<div class="row no-gutters">
+<div class=col-12>
+<img src=/post-data/usdt-support-core/header.png style=object-fit:cover;height:100% class="card-img shadow-sm" alt="Image for Userspace, Statically Defined Tracing support for Bitcoin Core">
+<a class="stretched-link umami--click--card-sm-img-userspace-statically-defined-tracing-support-for-bitcoin-core" href=/blog/bitcoin-core-usdt-support/></a>
 </div>
-<div class="col col-md-8">
+<div class=col-12>
 <div class=card-body>
+<small class=text-muted>
+August 30, 2021
+</small>
 <h4 class=card-title>Userspace, Statically Defined Tracing support for Bitcoin Core
 </h4>
 <p class=card-text>
 <p><em>This report updates on what 0xB10C, <a href=https://blog.coinbase.com/announcing-our-first-bitcoin-core-developer-grants-3d88559db068>Coinbase Crypto Community Fund grant recipient</a>,
 has been working on over the first half of his year-long Bitcoin development grant.
 This specifically covers his work on Userspace, Statically Defined Tracing support
-for Bitcoin Core. This report was published on …</em></p>
+for Bitcoin Core. This report was published on <a href=https://b10c.me/blog/008-bitcoin-core-usdt-support/>0xB10Cs blog</a> and the <a href=https://blog.coinbase.com/userspace-statically-defined-tracing-support-for-bitcoin-core-e4076cd3e07>Coinbase blog</a> too.</em></p>
 </p>
 </div>
-<a class="stretched-link umami--click--card-text-userspace-statically-defined-tracing-support-for-bitcoin-core" href=/blog/bitcoin-core-usdt-support/></a>
+<a class="stretched-link umami--click--card-sm-text-userspace-statically-defined-tracing-support-for-bitcoin-core" href=/blog/bitcoin-core-usdt-support/></a>
 </div>
 </div>
 </div>
